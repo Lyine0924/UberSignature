@@ -3,6 +3,8 @@ platform :ios, '11.4'
 
 use_frameworks!
 
-target :'UberSignature' do
-  pod 'UberSignature', :path => '../..'
+target :'UberSignatureDemo' do
+  pod 'UberSignature'
+	pod 'SnapKit'
+	pod 'Then'
 end

@@ -1,18 +1,26 @@
 PODS:
-  - UberSignature (1.0.0):
-    - UberSignature/Swift (= 1.0.0)
-  - UberSignature/Swift (1.0.0)
+  - SnapKit (5.0.1)
+  - Then (2.7.0)
+  - UberSignature (1.0.3):
+    - UberSignature/Swift (= 1.0.3)
+  - UberSignature/Swift (1.0.3)
 
 DEPENDENCIES:
-  - UberSignature (from `../..`)
+  - SnapKit
+  - Then
+  - UberSignature
 
-EXTERNAL SOURCES:
-  UberSignature:
-    :path: ../..
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SnapKit
+    - Then
+    - UberSignature
 
 SPEC CHECKSUMS:
-  UberSignature: 33ff12cdcd8104096620763a6084ca878ab60b76
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  UberSignature: 93a5860a83211569d6d25b586e0fcad8aa163144
 
-PODFILE CHECKSUM: f7469d3b7274929b8143016805a1b1b98ccbf212
+PODFILE CHECKSUM: 19b439dcb29f48e3ed40bd6fa15644eb645d3e03
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.9.3
