@@ -40,19 +40,28 @@ class DemoViewController: UIViewController, SignatureDrawingViewControllerDelega
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
         view.addSubview(resetButton)
         
+		saveImageButton.addTarget(self, action: #selector(saveImage), for: .touchUpInside)
+		view.addSubview(saveImageButton)
+		
+		
         // Constraints
         
         resetButton.translatesAutoresizingMaskIntoConstraints = false
+		saveImageButton.translatesAutoresizingMaskIntoConstraints = false
+
+		
         view.addConstraints([
             NSLayoutConstraint.init(item: resetButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 20),
             NSLayoutConstraint.init(item: resetButton, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 20),
+			
+			NSLayoutConstraint.init(item: saveImageButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 20),
+			NSLayoutConstraint.init(item: saveImageButton, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20),
             
             NSLayoutConstraint.init(item: signatureViewController.view, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0),
             NSLayoutConstraint.init(item: signatureViewController.view, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint.init(item: signatureViewController.view, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint.init(item: signatureViewController.view, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0),
             ])
-        
         
     }
     
@@ -72,10 +81,26 @@ class DemoViewController: UIViewController, SignatureDrawingViewControllerDelega
         button.setTitleColor(UIColor.blue, for: .normal)
         return button
     }()
+	
+	
+	private let saveImageButton: UIButton = {
+		let button = UIButton(type: .custom)
+		button.setTitle("save", for: .normal)
+		button.setTitleColor(UIColor.blue, for: .normal)
+		return button
+	}()
     
     @objc private func resetTapped() {
         signatureViewController.reset()
     }
+	
+	@objc private func saveImage() {
+		guard let image = signatureViewController.fullSignatureImage else { return }
+		
+		let viewController = ImagePreViewController(image: image)
+		
+		self.present(viewController, animated: true)
+	}
     
 }
 
