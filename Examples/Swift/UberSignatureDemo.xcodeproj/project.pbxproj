@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		43682D0E25132D63006B3CFD /* ImagePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682D0D25132D63006B3CFD /* ImagePreViewController.swift */; };
+		43682D1225134A99006B3CFD /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682D1125134A99006B3CFD /* Pixel.swift */; };
+		43682D1425134AC4006B3CFD /* UIImage+Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682D1325134AC4006B3CFD /* UIImage+Bitmap.swift */; };
 		814BED28206D89CA0025D3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814BED27206D89CA0025D3AD /* AppDelegate.swift */; };
 		814BED2A206D89CA0025D3AD /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814BED29206D89CA0025D3AD /* DemoViewController.swift */; };
 		814BED2D206D89CA0025D3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814BED2B206D89CA0025D3AD /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		0F26486C9219C8B688B4A40C /* Pods-UberSignatureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberSignatureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UberSignatureDemo/Pods-UberSignatureDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		12CA61EC41BA9F08CDCC7CB4 /* Pods-UberSignatureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberSignatureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UberSignatureDemo/Pods-UberSignatureDemo.release.xcconfig"; sourceTree = "<group>"; };
 		43682D0D25132D63006B3CFD /* ImagePreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreViewController.swift; sourceTree = "<group>"; };
+		43682D1125134A99006B3CFD /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
+		43682D1325134AC4006B3CFD /* UIImage+Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bitmap.swift"; sourceTree = "<group>"; };
 		52B48880C18FEC5F213B76D4 /* Pods-UberSignature.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberSignature.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UberSignature/Pods-UberSignature.debug.xcconfig"; sourceTree = "<group>"; };
 		814BED24206D89CA0025D3AD /* UberSignatureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSignatureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814BED27206D89CA0025D3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43682D0F25134A82006B3CFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43682D1125134A99006B3CFD /* Pixel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43682D1025134A88006B3CFD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43682D1325134AC4006B3CFD /* UIImage+Bitmap.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4857C2F5CAF09BC9F60B7139 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +86,8 @@
 		814BED1B206D89CA0025D3AD = {
 			isa = PBXGroup;
 			children = (
+				43682D1025134A88006B3CFD /* Extension */,
+				43682D0F25134A82006B3CFD /* Model */,
 				814BED26206D89CA0025D3AD /* UberSignature */,
 				814BED25206D89CA0025D3AD /* Products */,
 				4857C2F5CAF09BC9F60B7139 /* Pods */,
@@ -220,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43682D1425134AC4006B3CFD /* UIImage+Bitmap.swift in Sources */,
+				43682D1225134A99006B3CFD /* Pixel.swift in Sources */,
 				814BED2A206D89CA0025D3AD /* DemoViewController.swift in Sources */,
 				43682D0E25132D63006B3CFD /* ImagePreViewController.swift in Sources */,
 				814BED28206D89CA0025D3AD /* AppDelegate.swift in Sources */,
